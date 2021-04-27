@@ -6,6 +6,8 @@ class Account {
 
   // Virtual to test.
   virtual int GetBalance() const;
+  
+  bool operator==(const Account)const{return true;}
 
   // Virtual to test.
   virtual void ChangeBalance(int diff);
