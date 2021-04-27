@@ -10,10 +10,10 @@
   class MockAccount: public Account{
   public:
    MockAccount(int id, int balance):Account(id, balance){}
-   MOCK_METHOD1(int, GetBalance, (), (const, override));
-   MOCK_METHOD2(void, ChangeBalance, (int diff), (override));
-   MOCK_METHOD3(void, Lock, (), (override));
-   MOCK_METHOD4(void, Unlock, (), (override));
+   MOCK_METHOD(int, GetBalance, (), (const, override));
+   MOCK_METHOD(void, ChangeBalance, (int diff), (override));
+   MOCK_METHOD(void, Lock, (), (override));
+   MOCK_METHOD(void, Unlock, (), (override));
   };
 
   class MockTransaction: public Transaction{
